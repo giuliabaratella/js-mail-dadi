@@ -1,3 +1,5 @@
+// email validator 
+
 const validEmails = [
     'giuliab@boolean.com',
     'giuliab@gmail.com',
@@ -31,4 +33,5 @@ btn.addEventListener('click', function(){
 
 })
 
+// gioco dadi 
 

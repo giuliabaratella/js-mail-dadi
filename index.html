@@ -9,14 +9,29 @@
 </head>
 <body>
     <main>
-        <div class="p-5 text-center">
+        <div id="mail-validator" class="p-5 text-center">
             <h1 class="text-uppercase py-2">Verifica la mail</h1>
             <div class="p-4">
                 <label for="email">Inserisci la mail da convalidare</label>
                 <input type="email" id="email" name="email">
-                <button class="button">Verifica</button>
+                <button class="button btn btn-warning text-uppercase fw-bold">Verifica</button>
             </div>
             <h3 class="result"></h3>
+        </div>
+        <div id="game" class="text-center">
+            <h2 class="text-uppercase pb-3">Gioco dei dadi</h2>
+            <button class="button-game btn btn-warning text-uppercase fw-bold">Tira!</button>
+            <div class="d-flex justify-content-center">
+                <div class="player box">
+                    <h4 class="pt-2">Giocatore</h4>
+                    <p>Il tuo numero è...</p>
+                </div>
+                <div class="computer box">
+                    <h4 class="pt-2">Computer</h4>
+                    <p>Il tuo numero è...</p>
+                </div>
+            </div>
+            <h3 id="winner" class="d-none"></h3>
         </div>
     </main>
 

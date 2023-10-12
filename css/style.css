@@ -1,0 +1,21 @@
+.box {
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    background-color: cadetblue;
+    margin: 20px;
+
+}
+#winner {
+    width: fit-content;
+    margin: 0 auto;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+.win {
+    background-color: rgb(30, 164, 205);
+}
+.lose {
+    background-color: coral;
+}
