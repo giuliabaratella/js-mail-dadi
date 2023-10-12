@@ -49,13 +49,13 @@ btnGame.addEventListener ('click', function(){
     divComputer.innerHTML = dadoC;
     divGiocatore.innerHTML = dadoG;
     if (dadoG > dadoC) {
-        winnerMsg.innerHTML = 'hai vinto!';
+        winnerMsg.innerHTML = 'Hai vinto!';
         winnerMsg.classList.remove ('d-none');
         winnerMsg.classList.remove ('lose');
         winnerMsg.classList.remove ('draw');
         winnerMsg.classList.add ('win');
     } else if (dadoC > dadoG) {
-        winnerMsg.innerHTML = 'hai perso!'
+        winnerMsg.innerHTML = 'Hai perso!'
         winnerMsg.classList.remove ('d-none');
         winnerMsg.classList.remove ('win');
         winnerMsg.classList.remove ('draw');

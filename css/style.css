@@ -1,3 +1,7 @@
+#mail-validator {
+    background-color: rgb(182, 218, 250);
+    height: 300px;
+}
 .box {
     width: 400px;
     height: 400px;
@@ -11,7 +15,7 @@
     margin: 0 auto;
     color: white;
     border-radius: 20px;
-    padding: 5px 10px;
+    padding: 10px 20px;
 }
 .win {
     background-color: rgb(30, 164, 205);
@@ -21,4 +25,14 @@
 }
 .draw {
     background-color: rgb(243, 188, 50);
+}
+
+#n-dice-computer, #n-dice-player {
+    font-size: 10em;
+}
+.button, .button-game {
+    transition: all 0.2s;
+}
+.button:active , .button-game:active {
+    transform: scale(0.9);
 }
