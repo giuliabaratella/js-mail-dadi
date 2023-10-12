@@ -19,3 +19,6 @@
 .lose {
     background-color: coral;
 }
+.draw {
+    background-color: rgb(243, 188, 50);
+}

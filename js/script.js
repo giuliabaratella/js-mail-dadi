@@ -35,12 +35,45 @@ btn.addEventListener('click', function(){
 
 // gioco dadi 
 
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min) ) + min;
-  }
 
- let dadoG = getRndInteger(1,6);
- let dadoC = getRndInteger(1,6);
- console.log (dadoC, dadoG);
+const divGiocatore = document.getElementById('n-dice-player');
+const divComputer = document.getElementById('n-dice-computer');
+const btnGame = document.querySelector('.button-game');
+const winnerMsg = document.getElementById('winner');
+
+console.log (divComputer, divGiocatore, winnerMsg);
+
+btnGame.addEventListener ('click', function(){
+    let dadoG = getRndInteger(1,7);
+    let dadoC = getRndInteger(1,7);
+    divComputer.innerHTML = dadoC;
+    divGiocatore.innerHTML = dadoG;
+    if (dadoG > dadoC) {
+        winnerMsg.innerHTML = 'hai vinto!';
+        winnerMsg.classList.remove ('d-none');
+        winnerMsg.classList.remove ('lose');
+        winnerMsg.classList.remove ('draw');
+        winnerMsg.classList.add ('win');
+    } else if (dadoC > dadoG) {
+        winnerMsg.innerHTML = 'hai perso!'
+        winnerMsg.classList.remove ('d-none');
+        winnerMsg.classList.remove ('win');
+        winnerMsg.classList.remove ('draw');
+        winnerMsg.classList.add ('lose');
+    } else {
+        winnerMsg.innerHTML = 'Pareggio!'
+        winnerMsg.classList.remove ('d-none');
+        winnerMsg.classList.remove ('win');
+        winnerMsg.classList.remove ('lose');
+        winnerMsg.classList.add ('draw');
+    }
+})
+
+
+function getRndInteger(min, max) {
+return Math.floor(Math.random() * (max - min) ) + min;
+}
  
+
+
 
