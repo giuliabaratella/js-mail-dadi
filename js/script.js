@@ -35,3 +35,12 @@ btn.addEventListener('click', function(){
 
 // gioco dadi 
 
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+  }
+
+ let dadoG = getRndInteger(1,6);
+ let dadoC = getRndInteger(1,6);
+ console.log (dadoC, dadoG);
+ 
+
