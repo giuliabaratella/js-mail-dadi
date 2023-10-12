@@ -4,23 +4,31 @@ const validEmails = [
     'giuliab@yahoo.com'
 ]
 const btn = document.querySelector('button');
-let emailCheck = document.getElementById('email').value ;
 console.log (validEmails, btn);
 
 btn.addEventListener('click', function(){
-    let check = false ;
+    let emailCheck = document.getElementById('email').value ;
+    let result = document.querySelector('.result');
+    let check = false;
+
     for (let i = 0; i < validEmails.length; i++){
+        
         let validMail = validEmails [i] ;
-        if (emailCheck === validMail){
-            check = true ;
-        } 
-    }
-    if (check = true){
-        console.log ('valido');
-    } else {
-        console.log ('non valido');
+        console.log (validMail);
+
+        if (validMail === emailCheck) {
+            check = true;
+        }
     }
     
+    if (check) {
+        console.log ('valido');
+        result.innerHTML = 'La mail è valida';
+    } else {
+        console.log ('non valido');
+        result.innerHTML = 'La mail non è valida, ritenta'
+    }
+
 })
 
 
