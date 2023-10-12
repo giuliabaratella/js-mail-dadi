@@ -4,7 +4,23 @@ const validEmails = [
     'giuliab@yahoo.com'
 ]
 const btn = document.querySelector('button');
-const emailCheck = document.getElementById('email').value ;
+let emailCheck = document.getElementById('email').value ;
 console.log (validEmails, btn);
+
+btn.addEventListener('click', function(){
+    let check = false ;
+    for (let i = 0; i < validEmails.length; i++){
+        let validMail = validEmails [i] ;
+        if (emailCheck === validMail){
+            check = true ;
+        } 
+    }
+    if (check = true){
+        console.log ('valido');
+    } else {
+        console.log ('non valido');
+    }
+    
+})
 
 
