@@ -30,6 +30,7 @@ btn.addEventListener('click', function(){
         console.log ('non valido');
         result.innerHTML = 'La mail non è valida, ritenta'
     }
+    result.classList.remove ('d-none');
 
 })
 
@@ -50,23 +51,21 @@ btnGame.addEventListener ('click', function(){
     divGiocatore.innerHTML = dadoG;
     if (dadoG > dadoC) {
         winnerMsg.innerHTML = 'Hai vinto!';
-        winnerMsg.classList.remove ('d-none');
         winnerMsg.classList.remove ('lose');
         winnerMsg.classList.remove ('draw');
         winnerMsg.classList.add ('win');
     } else if (dadoC > dadoG) {
         winnerMsg.innerHTML = 'Hai perso!'
-        winnerMsg.classList.remove ('d-none');
         winnerMsg.classList.remove ('win');
         winnerMsg.classList.remove ('draw');
         winnerMsg.classList.add ('lose');
     } else {
         winnerMsg.innerHTML = 'Pareggio!'
-        winnerMsg.classList.remove ('d-none');
         winnerMsg.classList.remove ('win');
         winnerMsg.classList.remove ('lose');
         winnerMsg.classList.add ('draw');
     }
+    winnerMsg.classList.remove ('d-none');
 })
 
 
